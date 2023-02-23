@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="AI.css"/>
+    <script src="https://kit.fontawesome.com/c6eb9c389d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+
+<style> 
+
+    
+</style> 
+</head>  
+
+<body onload="LoadPage()"> 
+    <script>
+        function save(ID) {
+        //alert('chk1')
+        //alert(ID);
+        var checkbox = document.getElementById(ID);
+        localStorage.setItem(ID, checkbox.checked);
+        var text = document.getElementById(ID);
+        localStorage.setItem(ID, text.value);
+        //alert('chk2')
+        }
+        
+        function LoadPage() 
+        {
+            //for loading.
+            //var a=localStorage.getItem("checkbox1")
+            //alert (typeof a)
+            for (let i = 1; i <= 24; i++) {
+                 var id="checkbox"+i;
+                 var checked = JSON.parse(localStorage.getItem(id));
+            //alert(typeof checked)
+                document.getElementById(id).checked = checked;
+            }
+            for (let i = 1; i <= 1; i++) {
+                 var id="txtbox"+i;
+                 var grade = parseInt(JSON.parse(localStorage.getItem(id)));
+
+                 document.getElementById(id).value=grade;
+            //alert(typeof checked)
+            
+            }
+            
+        }
+        
+        
+    </script>
+       
+        
+    <nav class="navbar">
+        <div class="navbar__container">
+            <br /> <span class="tab"></span>
+            <a href="/" id="navbar__logo">
+                <i class="fa-brands fa-earlybirds "></i>אלגוריתמים
+            </a>
+                <!-- <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div> -->
+             <!-- <ul class="navbar__menu">   
+             <li class="navbar__item">
+                <a href="AI Course - 236501.html">
+                    <button class="submit">מבוא לבינה</button> 
+                </a>    
+             </li>    
+            </ul> -->
+        </div>
+    </nav>
+    <br /> 
+    <br /> 
+    <a href="234247 - Algo/אלגו הכנה לבוחן אמצע.pdf">Questions</a>
+    <br /> 
+    <br /> 
+    <br /> 
+    
+
+
+</body>  
+</html>

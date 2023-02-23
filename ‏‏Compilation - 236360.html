@@ -1,0 +1,284 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="AI.css"/>
+    <script src="https://kit.fontawesome.com/c6eb9c389d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+
+<style> 
+
+    
+</style> 
+</head>  
+
+<body onload="LoadPage()"> 
+    <script>
+        function save(ID) {
+        //alert('chk1')
+        //alert(ID);
+        var checkbox = document.getElementById(ID);
+        localStorage.setItem(ID, checkbox.checked);
+        //alert('chk2')
+        }
+        
+        function LoadPage() 
+        {
+            //for loading.
+            //var a=localStorage.getItem("checkbox1")
+            //alert (typeof a)
+            for (let i = 1; i <= 24; i++) {
+                 var id="checkbox"+i;
+                 var checked = JSON.parse(localStorage.getItem(id));
+            //alert(typeof checked)
+                document.getElementById(id).checked = checked;
+            }
+            
+        }
+        
+        
+    </script>
+       
+        
+    <nav class="navbar">
+        <div class="navbar__container">
+            <br /> <span class="tab"></span>
+            <a href="/" id="navbar__logo">
+                <i class="fa-brands fa-earlybirds "></i>חישוביות
+            </a>
+                <!-- <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div> -->
+             <!-- <ul class="navbar__menu">   
+             <li class="navbar__item">
+                <a href="AI Course - 236501.html">
+                    <button class="submit">מבוא לבינה</button> 
+                </a>    
+             </li>    
+            </ul> -->
+        </div>
+    </nav>
+    <br /> 
+    <br /> 
+    <br /> 
+    <br /> 
+    <br /> 
+    <div class="row">
+        <div class="column">
+            <h2><span class="tab"></span><span class="tab"></span>Exams</h2>
+            <table>
+                <thead>
+                    <tr class="active-row">
+                        <th>Status</th>
+                        <th>MoedA</th>
+                        <th>MoedB</th>
+                        <th>Mid</th>
+                        <th>Mid2[optional]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input id="checkbox1" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2021-2022\ExamA_W2122.pdf">22Wa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2021-2022\ExamB_W2122.pdf">22Wb</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2021-2022\Midterm_W2122.pdf">22Wmid</a></td>
+                        <td></td>
+                    </tr>
+                    
+
+
+                    
+                    <tr>
+                        <td><input id="checkbox2" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2021\ExamA_S21.pdf">21Sa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2021\ExamB_S21.pdf">21Sb</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2021\midterm_S21.pdf">21Smid</a></td>
+                        <td></td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td><input id="checkbox3" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2020-2021\MoedA_W2021.pdf">21Wa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2020-2021\MoedB_W2021.pdf">21Wb</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2020-2021\midterm_w20.pdf">21Wmid</a></td>
+                        <td></td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td><input id="checkbox4" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2020\MoedA_S20.pdf">20Sa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2020\MoedB_S20.pdf">20Sb</a></td>
+                        <td><a href="/">22Wa</a></td>
+                        <td></td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td><input id="checkbox5" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2019-2020\Winter1920_MoedA.pdf">20Wa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2019-2020\Winter1920_MoedB.pdf">20Wb</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2019-2020\Midterm_W2122.pdf">20WmidFixxxxx</a></td>
+                        <td></td>
+                    </tr>
+
+
+
+
+
+                    <tr>
+                        <td><input id="checkbox6" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2019\Exam1_s19.pdf">19Sa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2019\Exam2_s19.pdf">19Sb</a></td>
+                        <td><a href="/">22Wa</a></td>
+                        <td></td>
+                    </tr>
+
+
+
+
+
+                    <tr>
+                        <td><input id="checkbox7" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2018-2019\Exam1.pdf">19Wa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2018-2019\Exam2.pdf">19Wb</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2018-2019\ExamB_W2122.pdf">19WmidFixxxxxx</a></td>
+                        <td></td>
+                    </tr>
+                    
+
+
+
+                    <tr>
+                        <td><input id="checkbox8" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2018\Exam1_S18.pdf">18Sa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2018\Exam2_S18.pdf">18Sb</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2018\Midterm.pdf">18Smid</a></td>
+                        <td></td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td><input id="checkbox9" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2017-2018\Exam1v1.pdf">18Wa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2017-2018\Exam2v1.pdf">18Wb</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2017-2018\Midterm1.pdf">18Wmid</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_חורף 2017-2018\Midterm2.pdf">18Wmid</a></td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td><input id="checkbox10" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2017\exam-17100-01.pdf">17Sa</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2017\exam-17100-02.pdf">17Sb</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2017\mid-17100-01.pdf">17Smid</a></td>
+                        <td><a href="236343 - Theory of Computation\מבחנים משנים קודמות_אביב 2017\mid-17100-02.pdf">17Smid</a></td>
+                    </tr>
+
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="column">
+            <h2><span class="tab"></span><span class="tab"></span>Tutorials</h2>
+            <table>
+                <thead>
+                    <tr class="active-row">
+                        <th>Status</th>
+                        <th>Tutorials</th>
+                        <th>Additional materials</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input id="checkbox11" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial 0.pdf">Tutoria0</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox12" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial 1.pdf">Tutoria1</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox13" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial 2.pdf">Tutoria2</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox14" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial 3.pdf">Tutoria3</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox15" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_4_-_S22.pdf">Tutoria4</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox16" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_5_-_S22.pdf">Tutoria5</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox17" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_6.pdf">Tutoria6</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox18" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_7.pdf">Tutoria7</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox19" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_8.pdf">Tutoria8</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox20" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial 9.pdf">Tutoria9</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox21" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_10.pdf">Tutoria10</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox22" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_11.pdf">Tutoria11</a></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\3\Additional materials.pdf">3SAT-3Col</a></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox23" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_12.pdf">Tutoria12</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input id="checkbox24" type='checkbox' onclick='save(this.id)'></td>
+                        <td><a href="236343 - Theory of Computation\חומר עזר לתרגולים\Tutorial_13.pdf">Tutoria13</a></td>
+                        <td></td>
+                    </tr>
+                    <!-- and so on... -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>  
+</html>
